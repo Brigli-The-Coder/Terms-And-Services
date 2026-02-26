@@ -7,11 +7,7 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Work+Sans:wght@300;400;500;600&display=swap');
         
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         :root {
             --primary: #0a0e27;
@@ -32,10 +28,8 @@
 
         #canvas-container {
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
             z-index: 0;
         }
 
@@ -74,14 +68,12 @@
 
         main {
             max-width: 900px;
-            margin: 0 auto;
+            margin: 2rem auto 3rem;
             padding: 3rem 2rem 5rem;
             background: var(--bg-overlay);
             backdrop-filter: blur(20px);
             border-radius: 20px;
-            margin-top: 2rem;
-            margin-bottom: 3rem;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
             animation: fadeInUp 1s ease-out 0.3s both;
         }
 
@@ -110,20 +102,18 @@
         h2::before {
             content: '';
             position: absolute;
-            left: 0;
-            top: 50%;
+            left: 0; top: 50%;
             transform: translateY(-50%);
-            width: 4px;
-            height: 60%;
+            width: 4px; height: 60%;
             background: linear-gradient(180deg, var(--accent) 0%, var(--accent-light) 100%);
             border-radius: 2px;
         }
 
         h3 {
-            font-size: 1.3rem;
+            font-size: 1.1rem;
             font-weight: 600;
-            margin: 1.8rem 0 0.8rem;
-            color: var(--text);
+            margin: 1.4rem 0 0.6rem;
+            color: var(--accent-light);
         }
 
         p {
@@ -133,53 +123,50 @@
         }
 
         ul {
-            margin: 1rem 0 1.5rem 2rem;
+            margin: 0.8rem 0 1.2rem 2rem;
             color: var(--text-muted);
         }
 
         ul li {
-            margin-bottom: 0.7rem;
+            margin-bottom: 0.6rem;
             padding-left: 0.5rem;
-            position: relative;
         }
 
-        ul li::marker {
-            color: var(--accent-light);
-        }
+        ul li::marker { color: var(--accent-light); }
 
-        strong {
-            color: var(--text);
-            font-weight: 600;
-        }
+        strong { color: var(--text); font-weight: 600; }
 
         .highlight-box {
             background: rgba(108, 92, 231, 0.1);
             border-left: 4px solid var(--accent);
             padding: 1.5rem;
-            margin: 2rem 0;
+            margin: 1.5rem 0;
             border-radius: 8px;
             backdrop-filter: blur(10px);
         }
 
-        .highlight-box p:last-child {
-            margin-bottom: 0;
-        }
-        .tel{
-            color: white;
-            text-decoration: none;
-        }
+        .highlight-box p:last-child { margin-bottom: 0; }
+
+        .tel { color: white; text-decoration: none; }
 
         .price-info {
-            background: linear-gradient(135deg, rgba(108, 92, 231, 0.2) 0%, rgba(162, 155, 254, 0.1) 100%);
+            background: linear-gradient(135deg, rgba(108,92,231,0.2) 0%, rgba(162,155,254,0.1) 100%);
             padding: 2rem;
             border-radius: 12px;
-            margin: 2rem 0;
-            border: 1px solid rgba(108, 92, 231, 0.3);
+            margin: 1.5rem 0;
+            border: 1px solid rgba(108,92,231,0.3);
         }
 
-        .price-info h3 {
-            margin-top: 0;
-            color: var(--accent-light);
+        .price-info h3 { margin-top: 0; }
+
+        .warning-box {
+            background: rgba(253, 121, 168, 0.08);
+            border-left: 4px solid #fd79a8;
+            padding: 1.2rem 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 8px;
+            color: var(--text-muted);
+            font-size: 1rem;
         }
 
         footer {
@@ -197,49 +184,23 @@
             transition: color 0.3s ease;
         }
 
-        footer a:hover {
-            color: var(--text);
-        }
+        footer a:hover { color: var(--text); }
 
         @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(-30px); }
+            to   { opacity: 1; transform: translateY(0); }
         }
 
         @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(30px); }
+            to   { opacity: 1; transform: translateY(0); }
         }
 
         @media (max-width: 768px) {
-            h1 {
-                font-size: 2.2rem;
-            }
-
-            h2 {
-                font-size: 1.5rem;
-            }
-
-            main {
-                padding: 2rem 1.5rem 3rem;
-                margin: 1rem;
-            }
-
-            header {
-                padding: 2rem 1rem 1.5rem;
-            }
+            h1 { font-size: 2.2rem; }
+            h2 { font-size: 1.5rem; }
+            main { padding: 2rem 1.5rem 3rem; margin: 1rem; }
+            header { padding: 2rem 1rem 1.5rem; }
         }
     </style>
 </head>
@@ -254,13 +215,11 @@
 
         <main>
             <h1>Kushtet dhe Afatet</h1>
-            
             <p><strong>Përditësuar:</strong> Shkurt 2026</p>
-
             <p>Mirë se vini në faqen e Kushteve dhe Afateve të Brigli The Coder. Këto kushte rregullojnë marrëdhënien mes meje dhe klientëve të mi për shërbimet e zhvillimit të softuerit.</p>
 
+            <!-- 1 -->
             <h2>1. Shërbimet e Ofruara</h2>
-            <p>Brigli The Coder ofron shërbime profesionale të zhvillimit të softuerit, duke përfshirë por pa u kufizuar në:</p>
             <ul>
                 <li>Zhvillim të faqeve web (statike dhe dinamike me Django/Python)</li>
                 <li>Krijim dhe zhvillim i admin paneleve për menaxhim përmbajtjesh</li>
@@ -269,144 +228,124 @@
                 <li>Zgjidhje software të personalizuara</li>
                 <li>Optimizim dhe përmirësim të faqeve ekzistuese</li>
             </ul>
-            
-            <p><strong>Shënim:</strong> Unë <strong>nuk ofroj</strong> zhvillim të aplikacioneve mobile.</p>
+            <div class="warning-box">🚫 <strong>Shënim:</strong> Nuk ofroj zhvillim të aplikacioneve mobile.</div>
 
+            <!-- 2 -->
             <h2>2. Procesi i Projektit dhe Pagesat</h2>
-            
             <div class="highlight-box">
-                <h3>Pagesa Paraprake</h3>
-                <p><strong>Për çdo projekt të ri, kërkohet pagesa e 50% (gjysma e shumës totale) përpara se të fillojë puna.</strong></p>
-                <p>Kjo pagesë paraprake konfirmon angazhimin e klientit dhe mundëson fillimin e punës. Gjysma e mbetur paguhet pas përfundimit të projektit dhe para dorëzimit final të kodit/faqes.</p>
+                <p><strong>Për çdo projekt të ri, kërkohet pagesa e 50% përpara se të fillojë puna.</strong> Gjysma e mbetur paguhet pas përfundimit dhe para dorëzimit final.</p>
             </div>
-
-            <h3>Struktura e Pagesave:</h3>
             <ul>
-                <li><strong>Depozita fillestare:</strong> 50% e çmimit total të projektit (e pa kthyeshme pas fillimit të punës)</li>
-                <li><strong>Pagesa finale:</strong> 50% e mbetur para dorëzimit të produktit përfundimtar</li>
+                <li><strong>Depozita fillestare:</strong> 50% — e pakthyeshme pas fillimit të punës</li>
+                <li><strong>Pagesa finale:</strong> 50% — para dorëzimit të produktit përfundimtar</li>
             </ul>
+            <p>Për projekte mbi 3 muaj, mund të bëhen pagesa të ndërmjetme bazuar në milestone-t e projektit.</p>
 
-            <p>Për projekte më të mëdha që zgjasin mbi 3 muaj, mund të bëhen marrëveshje për pagesa të ndërmjetme bazuar në milestone-t e projektit.</p>
-
+            <!-- 3 -->
             <h2>3. Admin Panel dhe Menaxhimi i Përmbajtjes</h2>
-            <p>Për faqet që kërkojnë funksionalitet admin panel:</p>
             <ul>
-                <li>Unë <strong>zhvilloj të gjithë logjikën</strong> e admin panelit duke përdorur Django/Python</li>
-                <li>Krijohet një sistem i plotë për menaxhimin e përmbajtjes që del automatikisht në frontend</li>
-                <li>Ndërfaqja e admin panelit është e thjeshtë dhe <strong>e lehtë për përdorim</strong></li>
-                <li><strong>Unë nuk merrem</strong> me shtimin manual të produkteve apo përmbajtjeve nga ana ime - kjo është përgjegjësi e klientit përmes admin panelit që krijoj</li>
+                <li>Zhvilloj të gjithë logjikën e admin panelit duke përdorur Django/Python</li>
+                <li>Krijohet sistem i plotë për menaxhimin e përmbajtjes që del automatikisht në frontend</li>
+                <li>Ndërfaqja e admin panelit është e thjeshtë dhe e lehtë për përdorim</li>
                 <li>Ofroj trajnim të shkurtër për përdorimin e sistemit</li>
             </ul>
-
             <div class="price-info">
                 <h3>💰 Çmimet e Mirëmbajtjes dhe Ndryshimeve</h3>
-                
-                <p><strong>Mirëmbajtja Vjetore (Hosting Online):</strong></p>
+                <p><strong>Mirëmbajtja Vjetore:</strong></p>
                 <ul>
-                    <li><strong>10,000 Lekë (100€) në vit</strong></li>
-                    <li>Përfshin: Hosting të plotë (unë merrem me të gjithë hosting-un), SSL certificate, backup automatik, monitorim bazik</li>
-                    <li>Nuk përfshin: Ndryshime në dizajn ose funksionalitet</li>
+                    <li><strong>10,000 Lekë (100€) në vit</strong> — Hosting, SSL, backup automatik, monitorim bazik</li>
                 </ul>
-
                 <p><strong>Ndryshime dhe Përmirësime:</strong></p>
                 <ul>
-                    <li>Çdo ndryshim në faqe <strong>çmohet individualisht</strong></li>
-                    <li>Varet nga kompleksiteti i punës (kohë, vështirësi teknike)</li>
-                    <li>Ndryshime të vogla (tekst, foto): nga 1,000-3,000 Lekë</li>
-                    <li>Ndryshime të mesme (seksione të reja, forma): nga 5,000-15,000 Lekë</li>
-                    <li>Ndryshime të mëdha (redesign, funksionalitet i ri): sipas ofertës</li>
+                    <li>Ndryshime të vogla (tekst, foto): <strong>1,000 – 3,000 L</strong></li>
+                    <li>Ndryshime të mesme (seksione, forma): <strong>5,000 – 15,000 L</strong></li>
+                    <li>Ndryshime të mëdha (redesign, funksionalitet i ri): <strong>sipas ofertës</strong></li>
                 </ul>
             </div>
 
+            <!-- 4 -->
             <h2>4. Afatet e Dorëzimit</h2>
-            <p>Afati i dorëzimit të projektit varet nga kompleksiteti dhe madhësia e punës:</p>
             <ul>
-                <li>Faqe statike të thjeshta: 3-7 ditë</li>
-                <li>Faqe të mesme me shumë seksione: 1-3 javë</li>
-                <li>Aplikacione web me admin panel dhe backend: 2-6 javë</li>
-                <li>Projekte komplekse me funksionalitete të avancuara: 1-3 muaj</li>
+                <li>Faqe statike të thjeshta: <strong>3 – 7 ditë</strong></li>
+                <li>Faqe të mesme me shumë seksione: <strong>1 – 3 javë</strong></li>
+                <li>Aplikacione web me admin panel dhe backend: <strong>2 – 6 javë</strong></li>
+                <li>Projekte komplekse: <strong>1 – 3 muaj</strong></li>
             </ul>
-            <p>Afatet specifike do të diskutohen dhe konfirmohen në fillim të çdo projekti.</p>
 
+            <!-- 5 -->
             <h2>5. Revizionet dhe Ndryshimet</h2>
-            <p>Çdo projekt përfshin një numër të arsyeshëm revizionesh:</p>
             <ul>
-                <li>Deri në <strong>2 raunde revizionesh</strong> janë të përfshira në çmimin fillestare</li>
+                <li>Deri në <strong>2 raunde revizionesh</strong> janë të përfshira në çmimin fillestar</li>
                 <li>Revizione shtesë mund të kenë kosto ekstra</li>
                 <li>Ndryshime të mëdha në strukturë ose funksionalitet konsiderohen si projekt i ri</li>
             </ul>
 
+            <!-- 6 -->
             <h2>6. Pronësia dhe të Drejtat</h2>
-            <p>Pas pagesës së plotë:</p>
             <ul>
-                <li>Klienti merr <strong>të gjitha të drejtat</strong> mbi kodin dhe dizajnin e projektit të tij</li>
-                <li>Kodi burimor i plotë dorëzohet tek klienti</li>
-                <li>Unë ruaj të drejtën të përdor projektin në portfolion tim për qëllime promovuese</li>
+                <li>Kodi dhe projekti <strong>mbeten pronë e Brigli The Coder</strong></li>
+                <li>Klientit i jepet <strong>e drejta e përdorimit</strong> të faqes pas pagesës së plotë</li>
+                <li>Kodi burimor <strong>nuk dorëzohet</strong> tek klienti, por projekti menaxhohet nga Brigli The Coder</li>
+                <li>Ruaj të drejtën të përdor projektin në portfolion tim për qëllime promovuese</li>
                 <li>Libraritë dhe frameworkët e përdorura mbeten nën licensat e tyre origjinale</li>
             </ul>
 
-            <div class="highlight-box" style="background: linear-gradient(135deg, rgba(0, 184, 148, 0.15) 0%, rgba(0, 206, 201, 0.1) 100%); border-left-color: #00b894;">
-                <h3 style="color: #00d2a0;">🎁 Bonuset Falas Pas Përfundimit të Projektit</h3>
-                <p>Çdo klient që përfundon projektin e tij me sukses do të marrë <strong>FALAS</strong>:</p>
+            <!-- 7 -->
+            <h2>7. Bonuset Falas Pas Projektit</h2>
+            <div class="highlight-box" style="background: linear-gradient(135deg, rgba(0,184,148,0.15) 0%, rgba(0,206,201,0.1) 100%); border-left-color: #00b894;">
+                <p>Çdo klient që përfundon projektin me sukses do të marrë <strong>FALAS</strong>:</p>
                 <ul>
-                    <li><strong>🎴 Kartë NFC personale</strong> - Me të gjitha linket e rrjeteve sociale dhe kontaktet e klientit (vizitë digjitale moderne!)</li>
-                    <li><strong>🎥 Video reklamuese profesionale</strong> - E dërguar direkt në WhatsApp, gati për tu postuar në rrjetet sociale</li>
+                    <li>🎴 <strong>Kartë NFC personale</strong> — me të gjitha linket dhe kontaktet (vizitë digjitale moderne!)</li>
+                    <li>🎥 <strong>Video reklamuese profesionale</strong> — e dërguar në WhatsApp, gati për rrjetet sociale</li>
                 </ul>
-                <p style="margin-top: 1rem; font-size: 0.95rem;">Këto janë dhurata nga unë për besimin tuaj dhe për të ndihmuar në promovimin e biznesit tuaj! 🚀</p>
             </div>
 
-            <h2>7. Garancitë</h2>
-            <p>Për çdo projekt të kompletuar, ofroj:</p>
+            <!-- 8 -->
+            <h2>8. Garancitë</h2>
             <ul>
-                <li><strong>30 ditë garanci</strong> për çështje teknike që lindin nga gabime në kod</li>
-                <li>Ndihmë teknike për instalim dhe konfigurimin fillestar</li>
-                <li>Dokumentacion të detajuar për projektet komplekse</li>
+                <li><strong>30 ditë garanci</strong> për çështje teknike nga gabime në kod</li>
+                <li>Ndihmë teknike për konfigurimin fillestar</li>
+                <li>Dokumentacion i detajuar për projektet komplekse</li>
             </ul>
 
-            <h2>8. Anullimi i Projektit</h2>
-            <p>Nëse projekti anulohet:</p>
+            <!-- 9 -->
+            <h2>9. Anullimi i Projektit</h2>
             <ul>
-                <li>Depozita fillestare (50%) është <strong>e pa kthyeshme</strong> nëse puna ka filluar</li>
-                <li>Nëse anulohet përpara fillimit të punës, depozita mund të kthehet me 10% tarifë administrative</li>
-                <li>Nëse klienti vendos të ndalojë projektin në mes, paguhet për punën e kryer deri në atë moment</li>
+                <li>Depozita (50%) është <strong>e pakthyeshme</strong> nëse puna ka filluar</li>
+                <li>Anullim para fillimit: depozita kthehet me <strong>10% tarifë administrative</strong></li>
+                <li>Ndalim në mes: paguhet për punën e kryer deri në atë moment</li>
             </ul>
 
-            <h2>9. Përgjegjësitë e Klientit</h2>
-            <p>Për të siguruar suksesin e projektit, klienti është përgjegjës për:</p>
+            <!-- 10 -->
+            <h2>10. Përgjegjësitë e Klientit</h2>
             <ul>
-                <li>Të më tregojë <strong>qartë se çfarë bën në punën e tij/saj</strong> dhe çfarë shërbimesh/produkte ofron (unë nuk e di biznesi juaj, ju duhet të më informoni)</li>
-                <li>Të furnizojë të gjithë përmbajtjen (tekst, foto, video, logot) në kohë</li>
+                <li>Të më tregojë <strong>qartë se çfarë bën si biznes</strong> dhe çfarë shërbimesh/produkte ofron</li>
                 <li>Të japë feedback të qartë dhe në kohë</li>
                 <li>Të paguajë në kohë sipas marrëveshjes</li>
-                <li>Të menaxhojë vetë përmbajtjet përmes admin panelit pas përfundimit të projektit</li>
-            </ul>
-            
-            <p><strong>Shënim i rëndësishëm:</strong> Sa më shumë detaje të më jepni për biznesin tuaj, aq më mirë do të jetë rezultati final!</p>
-
-            <h2>10. Kufizimi i Përgjegjësisë</h2>
-            <p>Brigli The Coder nuk është përgjegjës për:</p>
-            <ul>
-                <li>Humbje të të dhënave që vijnë nga veprime të klientit (fshirje aksidentale, etj.)</li>
-                <li>Ndryshime në ligjet dhe rregulloret që ndikojnë në projekt pas dorëzimit</li>
-                <li>Dëmtime indirekte ose humbje fitimi</li>
-                <li>Probleme që shkaktohen nga përmbajtja e furnizuar nga klienti</li>
+                <li>Të menaxhojë vetë përmbajtjet përmes admin panelit pas përfundimit</li>
             </ul>
 
-            <h2>11. Konfidencialiteti</h2>
-            <p>Të gjitha informacionet e klientit trajtohen me konfidencialitet të plotë. Nuk ndaj asnjë informacion të projektit me palë të treta pa pëlqimin tuaj.</p>
+            <!-- 11 -->
+            <h2>11. Kufizimi i Përgjegjësisë</h2>
+            <p>Brigli The Coder nuk është përgjegjës për humbje të dhënash nga veprime të klientit, dëmtime indirekte, ose probleme nga përmbajtja e furnizuar nga klienti.</p>
 
-            <h2>12. Ndryshimet në Kushte</h2>
-            <p>Këto kushte mund të përditësohen periodikisht. Klientët do të njoftohen për çdo ndryshim material në kushtet e shërbimit.</p>
+            <!-- 12 -->
+            <h2>12. Konfidencialiteti</h2>
+            <p>Të gjitha informacionet e klientit trajtohen me konfidencialitet të plotë. Nuk ndaj asnjë informacion projekti me palë të treta pa pëlqimin tuaj.</p>
 
-            <h2>13. Kontakti</h2>
-            <p>Për çdo pyetje rreth këtyre kushteve, mund të më kontaktoni:</p>
+            <!-- 13 -->
+            <h2>13. Ndryshimet në Kushte</h2>
+            <p>Këto kushte mund të përditësohen periodikisht. Klientët do të njoftohen për çdo ndryshim material.</p>
+
+            <!-- 14 -->
+            <h2>14. Kontakti</h2>
             <div class="highlight-box">
                 <p><strong>WhatsApp:</strong> <a class="tel" href="https://wa.me/355694538437">+355 69 453 8437</a></p>
                 <p><strong>Lokacioni:</strong> Shkodër, Shqipëri</p>
                 <p><strong>Website:</strong> <a href="https://brigli-the-coder.com" target="_blank">brigli-the-coder.com</a></p>
             </div>
 
-            <p style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); color: var(--text-muted); font-size: 0.95rem;">
+            <p style="margin-top:3rem; padding-top:2rem; border-top:1px solid rgba(255,255,255,0.1); color:var(--text-muted); font-size:0.95rem;">
                 Duke filluar një projekt me Brigli The Coder, ju pranoni të gjitha kushtet e përshkruara më sipër.
             </p>
         </main>
@@ -417,140 +356,72 @@
         </footer>
     </div>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script>
-        // Three.js Scene Setup
         const container = document.getElementById('canvas-container');
         const scene = new THREE.Scene();
         const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
         const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-        
         renderer.setSize(window.innerWidth, window.innerHeight);
         renderer.setPixelRatio(window.devicePixelRatio);
         container.appendChild(renderer.domElement);
 
-        // Create geometric particles
         const particlesGeometry = new THREE.BufferGeometry();
         const particlesCount = 3000;
         const posArray = new Float32Array(particlesCount * 3);
-
-        for(let i = 0; i < particlesCount * 3; i++) {
-            posArray[i] = (Math.random() - 0.5) * 100;
-        }
-
+        for(let i = 0; i < particlesCount * 3; i++) posArray[i] = (Math.random() - 0.5) * 100;
         particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
-
-        const particlesMaterial = new THREE.PointsMaterial({
-            size: 0.15,
-            color: 0x6c5ce7,
-            transparent: true,
-            opacity: 0.8,
-            blending: THREE.AdditiveBlending
-        });
-
+        const particlesMaterial = new THREE.PointsMaterial({ size: 0.15, color: 0x6c5ce7, transparent: true, opacity: 0.8, blending: THREE.AdditiveBlending });
         const particlesMesh = new THREE.Points(particlesGeometry, particlesMaterial);
         scene.add(particlesMesh);
 
-        // Create rotating wireframe sphere
-        const sphereGeometry = new THREE.IcosahedronGeometry(15, 1);
-        const sphereMaterial = new THREE.MeshBasicMaterial({
-            color: 0xa29bfe,
-            wireframe: true,
-            transparent: true,
-            opacity: 0.15
-        });
-        const sphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
+        const sphere = new THREE.Mesh(
+            new THREE.IcosahedronGeometry(15, 1),
+            new THREE.MeshBasicMaterial({ color: 0xa29bfe, wireframe: true, transparent: true, opacity: 0.15 })
+        );
         scene.add(sphere);
 
-        // Create floating geometric shapes
         const shapes = [];
-        const geometries = [
-            new THREE.TetrahedronGeometry(2),
-            new THREE.OctahedronGeometry(2),
-            new THREE.IcosahedronGeometry(1.5)
-        ];
-
+        const geos = [new THREE.TetrahedronGeometry(2), new THREE.OctahedronGeometry(2), new THREE.IcosahedronGeometry(1.5)];
         for(let i = 0; i < 8; i++) {
-            const geometry = geometries[Math.floor(Math.random() * geometries.length)];
-            const material = new THREE.MeshBasicMaterial({
-                color: 0x6c5ce7,
-                wireframe: true,
-                transparent: true,
-                opacity: 0.3
-            });
-            const mesh = new THREE.Mesh(geometry, material);
-            
-            mesh.position.x = (Math.random() - 0.5) * 50;
-            mesh.position.y = (Math.random() - 0.5) * 50;
-            mesh.position.z = (Math.random() - 0.5) * 50;
-            
-            mesh.rotation.x = Math.random() * Math.PI;
-            mesh.rotation.y = Math.random() * Math.PI;
-            
-            shapes.push({
-                mesh: mesh,
-                rotationSpeed: {
-                    x: (Math.random() - 0.5) * 0.02,
-                    y: (Math.random() - 0.5) * 0.02,
-                    z: (Math.random() - 0.5) * 0.02
-                }
-            });
-            
+            const mesh = new THREE.Mesh(
+                geos[Math.floor(Math.random() * geos.length)],
+                new THREE.MeshBasicMaterial({ color: 0x6c5ce7, wireframe: true, transparent: true, opacity: 0.3 })
+            );
+            mesh.position.set((Math.random()-0.5)*50, (Math.random()-0.5)*50, (Math.random()-0.5)*50);
+            mesh.rotation.set(Math.random()*Math.PI, Math.random()*Math.PI, 0);
+            shapes.push({ mesh, rs: { x:(Math.random()-0.5)*0.02, y:(Math.random()-0.5)*0.02, z:(Math.random()-0.5)*0.02 } });
             scene.add(mesh);
         }
 
         camera.position.z = 30;
-
-        // Mouse movement interaction
-        let mouseX = 0;
-        let mouseY = 0;
-
-        document.addEventListener('mousemove', (event) => {
-            mouseX = (event.clientX / window.innerWidth) * 2 - 1;
-            mouseY = -(event.clientY / window.innerHeight) * 2 + 1;
+        let mouseX = 0, mouseY = 0;
+        document.addEventListener('mousemove', e => {
+            mouseX = (e.clientX / window.innerWidth) * 2 - 1;
+            mouseY = -(e.clientY / window.innerHeight) * 2 + 1;
         });
-
-        // Scroll effect
         let scrollY = 0;
-        window.addEventListener('scroll', () => {
-            scrollY = window.scrollY;
-        });
+        window.addEventListener('scroll', () => scrollY = window.scrollY);
 
-        // Animation loop
         function animate() {
             requestAnimationFrame(animate);
-
-            // Rotate particles
             particlesMesh.rotation.y += 0.0005;
             particlesMesh.rotation.x += 0.0002;
-
-            // Rotate main sphere
             sphere.rotation.y += 0.001;
             sphere.rotation.x += 0.0005;
-
-            // Animate floating shapes
-            shapes.forEach(shape => {
-                shape.mesh.rotation.x += shape.rotationSpeed.x;
-                shape.mesh.rotation.y += shape.rotationSpeed.y;
-                shape.mesh.rotation.z += shape.rotationSpeed.z;
-
-                // Floating animation
-                shape.mesh.position.y += Math.sin(Date.now() * 0.001 + shape.mesh.position.x) * 0.01;
+            shapes.forEach(s => {
+                s.mesh.rotation.x += s.rs.x;
+                s.mesh.rotation.y += s.rs.y;
+                s.mesh.rotation.z += s.rs.z;
+                s.mesh.position.y += Math.sin(Date.now() * 0.001 + s.mesh.position.x) * 0.01;
             });
-
-            // Camera movement based on mouse
             camera.position.x += (mouseX * 5 - camera.position.x) * 0.05;
             camera.position.y += (mouseY * 5 - camera.position.y) * 0.05;
-
-            // Camera movement based on scroll
             camera.position.z = 30 + scrollY * 0.01;
-
             renderer.render(scene, camera);
         }
-
         animate();
 
-        // Handle window resize
         window.addEventListener('resize', () => {
             camera.aspect = window.innerWidth / window.innerHeight;
             camera.updateProjectionMatrix();
